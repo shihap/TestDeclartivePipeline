@@ -26,10 +26,12 @@ pipeline {
 
     stage('deploy') {
       steps {
+        input(message: 'Are you sure to deploy?', ok: 'Yes')
         echo 'deploy'
+        sh 'date'
       }
     }
-    
+
     stage('Notify new release') {
       steps {
         echo 'new release deployed'
