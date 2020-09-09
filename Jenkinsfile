@@ -1,18 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('building stages') {
-      parallel {
-        stage('build') {
-          steps {
-            echo 'building'
-          }
-        }
-
-        stage('build2') {
-          steps {
-            echo 'build2'
-          }
+    stage('build') {
+      steps {
+        echo 'building'
+        timeout(time: 3, unit: 'SECONDS') {
+          sh 'sleep 5'
         }
 
       }
