@@ -29,6 +29,12 @@ pipeline {
         echo 'deploy'
       }
     }
+    
+    stage('Notify new release') {
+      steps {
+        echo 'new release deployed'
+      }
+    }
 
   }
 }
