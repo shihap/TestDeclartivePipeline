@@ -21,6 +21,7 @@ pipeline {
     stage('test') {
       steps {
         echo 'testing'
+        sh 'wwwwwww'
       }
     }
 
